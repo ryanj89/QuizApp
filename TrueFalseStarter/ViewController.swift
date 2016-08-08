@@ -16,8 +16,11 @@ class ViewController: UIViewController {
     var questionsAsked = 0
     var correctQuestions = 0
     var indexOfSelectedQuestion: Int = 0
+    var previousQuestions:[Int] = []
     
     var gameSound: SystemSoundID = 0
+    var correctSound: SystemSoundID = 1
+    var wrongSound: SystemSoundID = 2
     
     
     @IBOutlet weak var questionField: UILabel!
@@ -31,6 +34,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadGameStartSound()
+        loadCorrectAnswerSound()
+        loadWrongAnswerSound()
         // Start game
         playGameStartSound()
         displayQuestion()
@@ -44,6 +49,13 @@ class ViewController: UIViewController {
     func displayQuestion() {
         // Select a question using random index value
         indexOfSelectedQuestion = GKRandomSource.sharedRandom().nextIntWithUpperBound(quizQuestions.count)
+        
+        // If question was used previously, will generate another random index until we get a new question.
+        while previousQuestions.contains(indexOfSelectedQuestion) {
+            indexOfSelectedQuestion = GKRandomSource.sharedRandom().nextIntWithUpperBound(quizQuestions.count)
+        }
+        
+        previousQuestions.append(indexOfSelectedQuestion)
         let quizQuestion = quizQuestions[indexOfSelectedQuestion]
         questionField.text = quizQuestion.question
         
@@ -78,9 +90,11 @@ class ViewController: UIViewController {
         let correctAnswer = selectedQuestion.answer
         
         if (sender.titleLabel?.text == correctAnswer){
+            playCorrectAnswerSound()
             correctQuestions += 1
             questionField.text = "Correct!"
         } else {
+            playWrongAnswerSound()
             questionField.text = "Sorry, wrong answer!"
         }
         
@@ -106,6 +120,8 @@ class ViewController: UIViewController {
         
         questionsAsked = 0
         correctQuestions = 0
+        indexOfSelectedQuestion = 0
+        previousQuestions = []
         nextRound()
     }
     
@@ -125,6 +141,8 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    // Game Start Sound
     func loadGameStartSound() {
         let pathToSoundFile = NSBundle.mainBundle().pathForResource("GameSound", ofType: "wav")
         let soundURL = NSURL(fileURLWithPath: pathToSoundFile!)
@@ -133,6 +151,28 @@ class ViewController: UIViewController {
     
     func playGameStartSound() {
         AudioServicesPlaySystemSound(gameSound)
+    }
+    
+    // Correct Answer Sound
+    func loadCorrectAnswerSound() {
+        let pathToSoundFile = NSBundle.mainBundle().pathForResource("CorrectSound", ofType: "wav")
+        let soundURL = NSURL(fileURLWithPath: pathToSoundFile!)
+        AudioServicesCreateSystemSoundID(soundURL, &correctSound)
+    }
+    
+    func playCorrectAnswerSound() {
+        AudioServicesPlaySystemSound(correctSound)
+    }
+    
+    // Wrong Answer Sound
+    func loadWrongAnswerSound() {
+        let pathToSoundFile = NSBundle.mainBundle().pathForResource("WrongSound", ofType: "wav")
+        let soundURL = NSURL(fileURLWithPath: pathToSoundFile!)
+        AudioServicesCreateSystemSoundID(soundURL, &wrongSound)
+    }
+    
+    func playWrongAnswerSound() {
+        AudioServicesPlaySystemSound(wrongSound)
     }
 }
 
