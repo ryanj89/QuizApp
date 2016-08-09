@@ -6,10 +6,12 @@
 //  Copyright © 2016 Treehouse. All rights reserved.
 //
 
-// Create Quiz class to instantiate each trivia question
 import Foundation
 
+
+// Create Quiz class to instantiate each trivia question
 class Quiz {
+    
     let question: String
     let firstChoice: String
     let secondChoice: String
@@ -27,8 +29,9 @@ class Quiz {
     }
 }
 
-// Instantiate trivia questions with the Quiz class
 
+
+// Instantiate trivia questions with the Quiz class
 let quizQuestion1 = Quiz(question: "This was the only US President to serve more than two consecutive terms.",
                          firstChoice: "George Washington",
                          secondChoice: "Franklin D. Roosevelt",
@@ -99,8 +102,9 @@ let quizQuestion10 = Quiz(question: "Which of these countries won the most medal
                          fourthChoice: "Great Britain",
                          answer: "Great Britain")
 
-// Create collection of all quiz questions
 
+
+// Create collection of all quiz questions
 let quizQuestions = [quizQuestion1,
                      quizQuestion2,
                      quizQuestion3,

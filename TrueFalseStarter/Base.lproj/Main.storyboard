@@ -4,7 +4,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,52 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K17-uy-MvB">
-                                <rect key="frame" x="20" y="530" width="560" height="50"/>
-                                <color key="backgroundColor" red="0.0" green="0.57647058823529407" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="Nhg-Xe-e6B"/>
-                                    <constraint firstAttribute="height" constant="50" id="VyI-eA-Ci2"/>
-                                    <constraint firstAttribute="height" constant="50" id="Xjt-Sx-yOZ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Play Again"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="12"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Nhg-Xe-e6B"/>
-                                        <exclude reference="VyI-eA-Ci2"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="playAgain" destination="BYZ-38-t0r" eventType="touchUpInside" id="klz-B2-JAN"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct or Incorrect" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gq-ef-LmP" userLabel="CorrectOrIncorrectField">
-                                <rect key="frame" x="20" y="78" width="560" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="PJf-TW-eIK"/>
-                                    <constraint firstAttribute="height" constant="50" id="rUW-OS-MzO"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="PJf-TW-eIK"/>
-                                    </mask>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sample Question" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3V-ih-1Ky">
-                                <rect key="frame" x="20" y="20" width="560" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sample Question" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="I3V-ih-1Ky">
+                                <rect key="frame" x="20" y="20" width="560" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="BSd-g4-VYF"/>
-                                    <constraint firstAttribute="height" constant="50" id="x86-0P-WqU"/>
+                                    <constraint firstAttribute="height" constant="60" id="x86-0P-WqU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -75,151 +33,200 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AS4-HX-g9f" userLabel="SecondChoiceButton">
-                                <rect key="frame" x="20" y="250" width="560" height="50"/>
-                                <color key="backgroundColor" red="0.047058823530000002" green="0.47450980390000003" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gq-ef-LmP" userLabel="TimerLabel">
+                                <rect key="frame" x="20" y="80" width="560" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Ifi-zB-Aem"/>
-                                    <constraint firstAttribute="height" constant="50" id="Nfq-Ve-eJQ"/>
-                                    <constraint firstAttribute="width" constant="300" id="roJ-GK-9if"/>
+                                    <constraint firstAttribute="height" constant="50" id="PJf-TW-eIK"/>
+                                    <constraint firstAttribute="height" constant="50" id="rUW-OS-MzO"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Second Choice"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="12"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="Ifi-zB-Aem"/>
-                                        <exclude reference="roJ-GK-9if"/>
+                                        <exclude reference="PJf-TW-eIK"/>
                                     </mask>
                                 </variation>
-                                <connections>
-                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qfk-Z2-crr"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFG-Bc-Xa3" userLabel="ThirdChoiceButton">
-                                <rect key="frame" x="20" y="325" width="560" height="50"/>
-                                <color key="backgroundColor" red="0.047058823530000002" green="0.47450980390000003" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="pNG-wz-Bmy"/>
-                                    <constraint firstAttribute="width" constant="300" id="sJ5-Fh-FnS"/>
-                                    <constraint firstAttribute="height" constant="50" id="tdP-1n-bKL"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Third Choice"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="12"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="sJ5-Fh-FnS"/>
-                                        <exclude reference="tdP-1n-bKL"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iCX-mv-Hrx"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3H-me-EJe" userLabel="FourthChoiceButton">
-                                <rect key="frame" x="20" y="400" width="560" height="50"/>
-                                <color key="backgroundColor" red="0.047058823530000002" green="0.47450980390000003" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="cPG-zF-zCf"/>
-                                    <constraint firstAttribute="width" constant="300" id="eMa-ni-CAp"/>
-                                    <constraint firstAttribute="height" constant="50" id="w8B-on-cfS"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Fourth Choice"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="12"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="eMa-ni-CAp"/>
-                                        <exclude reference="w8B-on-cfS"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jhi-Dy-hQ4"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1V-MS-ECi" userLabel="FirstChoiceButton">
-                                <rect key="frame" x="20" y="175" width="560" height="50"/>
-                                <color key="backgroundColor" red="0.047058823529411764" green="0.47450980392156861" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="3ka-0t-fLW"/>
-                                    <constraint firstAttribute="height" constant="50" id="9HK-bV-A3n"/>
-                                    <constraint firstAttribute="width" constant="300" id="vLb-Lv-pvf"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="First Choice"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="12"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="9HK-bV-A3n"/>
-                                        <exclude reference="vLb-Lv-pvf"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pHS-se-fli"/>
-                                </connections>
-                            </button>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cIF-ci-Uf6">
+                                <rect key="frame" x="20" y="418" width="560" height="120"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DbD-6O-HLO">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.57647058819999997" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="89m-xw-fjh"/>
+                                            <constraint firstAttribute="width" constant="300" id="Il6-Zj-Txt"/>
+                                            <constraint firstAttribute="height" constant="50" id="d5x-mw-onS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Next Question"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="89m-xw-fjh"/>
+                                                <exclude reference="Il6-Zj-Txt"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="loadNextRoundWithButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cJO-no-wa1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K17-uy-MvB">
+                                        <rect key="frame" x="0.0" y="70" width="560" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.57647058823529407" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="Nhg-Xe-e6B"/>
+                                            <constraint firstAttribute="height" constant="50" id="VyI-eA-Ci2"/>
+                                            <constraint firstAttribute="height" constant="50" id="Xjt-Sx-yOZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Play Again"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Nhg-Xe-e6B"/>
+                                                <exclude reference="VyI-eA-Ci2"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="playAgain" destination="BYZ-38-t0r" eventType="touchUpInside" id="klz-B2-JAN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5il-LO-EPj">
+                                <rect key="frame" x="20" y="138" width="560" height="260"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1V-MS-ECi" userLabel="FirstChoiceButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="50"/>
+                                        <color key="backgroundColor" red="0.047058823529411764" green="0.47450980392156861" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="3ka-0t-fLW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="First Choice"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pHS-se-fli"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AS4-HX-g9f" userLabel="SecondChoiceButton">
+                                        <rect key="frame" x="0.0" y="70" width="560" height="50"/>
+                                        <color key="backgroundColor" red="0.047058823530000002" green="0.47450980390000003" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Nfq-Ve-eJQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Second Choice"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qfk-Z2-crr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFG-Bc-Xa3" userLabel="ThirdChoiceButton">
+                                        <rect key="frame" x="0.0" y="140" width="560" height="50"/>
+                                        <color key="backgroundColor" red="0.047058823530000002" green="0.47450980390000003" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="pNG-wz-Bmy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Third Choice"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iCX-mv-Hrx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3H-me-EJe" userLabel="FourthChoiceButton">
+                                        <rect key="frame" x="0.0" y="210" width="560" height="50"/>
+                                        <color key="backgroundColor" red="0.047058823530000002" green="0.47450980390000003" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="cPG-zF-zCf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Fourth Choice"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jhi-Dy-hQ4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.031372549019607843" green="0.16862745098039217" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="t3H-me-EJe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4u6-Eh-pAT"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="t3H-me-EJe" secondAttribute="bottom" multiplier="8:6" id="77k-4g-fge"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="J1V-MS-ECi" secondAttribute="trailing" id="8uH-g0-yAm"/>
-                            <constraint firstItem="t3H-me-EJe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dnc-Mf-2DB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="t3H-me-EJe" secondAttribute="trailing" id="Ffh-oc-T3Z"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="KFG-Bc-Xa3" secondAttribute="trailing" id="IYw-F2-AeU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1gq-ef-LmP" secondAttribute="bottom" constant="20" id="0Ql-gf-DH8"/>
+                            <constraint firstItem="cIF-ci-Uf6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Jl-oT-T2W"/>
+                            <constraint firstItem="5il-LO-EPj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8QP-TY-2fF"/>
+                            <constraint firstItem="cIF-ci-Uf6" firstAttribute="top" secondItem="5il-LO-EPj" secondAttribute="bottom" constant="20" id="DtY-X0-Snf"/>
                             <constraint firstItem="I3V-ih-1Ky" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="K4P-Ab-JVa"/>
-                            <constraint firstItem="J1V-MS-ECi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Odt-8R-uuR"/>
-                            <constraint firstItem="J1V-MS-ECi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="PHb-DL-n4B"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="J1V-MS-ECi" secondAttribute="bottom" multiplier="8:3" id="QGA-Ir-aYs"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="AS4-HX-g9f" secondAttribute="trailing" id="RrV-XT-YhA"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KFG-Bc-Xa3" secondAttribute="bottom" multiplier="8:5" id="Ryi-Jp-rMk"/>
-                            <constraint firstItem="K17-uy-MvB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WUV-5i-FUA"/>
+                            <constraint firstItem="1gq-ef-LmP" firstAttribute="top" secondItem="I3V-ih-1Ky" secondAttribute="bottom" id="VqO-nt-IDe"/>
                             <constraint firstItem="1gq-ef-LmP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="WtS-oX-Jcp"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="K17-uy-MvB" secondAttribute="bottom" constant="20" id="cFM-az-UAn"/>
-                            <constraint firstItem="K17-uy-MvB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="er2-z5-Sbz"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AS4-HX-g9f" secondAttribute="bottom" multiplier="8:4" id="fL6-Fe-fUZ"/>
-                            <constraint firstItem="AS4-HX-g9f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="k3r-7B-R8f"/>
+                            <constraint firstItem="5il-LO-EPj" firstAttribute="top" secondItem="1gq-ef-LmP" secondAttribute="bottom" constant="8" id="Xbf-ej-FIx"/>
+                            <constraint firstItem="cIF-ci-Uf6" firstAttribute="top" secondItem="5il-LO-EPj" secondAttribute="bottom" constant="20" id="Yxf-hC-hbK"/>
+                            <constraint firstItem="5il-LO-EPj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="aL0-eR-sy2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cIF-ci-Uf6" secondAttribute="bottom" constant="20" id="dKP-SJ-SNr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5il-LO-EPj" secondAttribute="trailing" id="dzC-mX-Wd6"/>
+                            <constraint firstItem="5il-LO-EPj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eJc-IS-gEI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cIF-ci-Uf6" secondAttribute="trailing" id="eUP-aY-ual"/>
                             <constraint firstItem="I3V-ih-1Ky" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oK3-xo-D8N"/>
-                            <constraint firstItem="AS4-HX-g9f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p2U-oH-mDS"/>
-                            <constraint firstItem="KFG-Bc-Xa3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qfy-bE-vip"/>
                             <constraint firstItem="1gq-ef-LmP" firstAttribute="top" secondItem="I3V-ih-1Ky" secondAttribute="bottom" constant="8" id="tci-eW-PJC"/>
+                            <constraint firstItem="cIF-ci-Uf6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="uNr-cy-3Xn"/>
                             <constraint firstItem="I3V-ih-1Ky" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="x89-0k-bbz"/>
-                            <constraint firstItem="KFG-Bc-Xa3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xZa-nX-hJF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="K17-uy-MvB" secondAttribute="trailing" id="xoR-Ef-ue8"/>
                             <constraint firstItem="I3V-ih-1Ky" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="y1X-Ge-5YD"/>
                             <constraint firstItem="1gq-ef-LmP" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ydV-27-2WX"/>
                             <constraint firstItem="1gq-ef-LmP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z6j-XY-sFP"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="tci-eW-PJC"/>
+                                <exclude reference="eJc-IS-gEI"/>
+                                <exclude reference="DtY-X0-Snf"/>
+                                <exclude reference="0Ql-gf-DH8"/>
+                                <exclude reference="dKP-SJ-SNr"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="firstChoiceButton" destination="J1V-MS-ECi" id="JPP-HT-utZ"/>
                         <outlet property="fourthChoiceButton" destination="t3H-me-EJe" id="jnP-V5-Ana"/>
+                        <outlet property="nextQuestionButton" destination="DbD-6O-HLO" id="q8C-l1-0J6"/>
                         <outlet property="playAgainButton" destination="K17-uy-MvB" id="0Bx-Cm-ye0"/>
                         <outlet property="questionField" destination="I3V-ih-1Ky" id="7UI-o2-ATi"/>
                         <outlet property="secondChoiceButton" destination="AS4-HX-g9f" id="rl8-dr-cg3"/>
                         <outlet property="thirdChoiceButton" destination="KFG-Bc-Xa3" id="cAz-sb-A6X"/>
+                        <outlet property="timerLabel" destination="1gq-ef-LmP" id="nof-6a-pom"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
